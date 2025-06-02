@@ -41,7 +41,7 @@ public class MovimentoInimigo : MonoBehaviour
       ataque = false;
         
       ataqueTime += Time.unscaledDeltaTime;
-      Debug.Log( ataqueTime );
+      //Debug.Log( ataqueTime );
       
         _sphereCollider.radius = raioDeVisao;
 
