@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -6,9 +7,13 @@ public class PlayerManager : MonoBehaviour
     private MovimentoPlayer movimentoPlayer;
     public float velocidadeDaAnimacao = 1;
     
+    private Personagem personagem;
+    
+    
     void Start()
     {
         movimentoPlayer = GetComponent<MovimentoPlayer>();
+        personagem = GetComponent<Personagem>();
     }
    void Update()
     {
@@ -19,5 +24,11 @@ public class PlayerManager : MonoBehaviour
       {
           animator.SetTrigger("Ataque");  
       }
+
+      if (personagem.Energia() <= 0)
+      {
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+      }
+
     }
 }

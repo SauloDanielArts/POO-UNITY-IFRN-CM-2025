@@ -104,7 +104,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240249740004889835}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -120,7 +120,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 890239ab4fbdef744b6c5b9e3a7b4482, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -275,8 +275,9 @@ GameObject:
   - component: {fileID: 2028847658633212927}
   - component: {fileID: 2412377380620870278}
   - component: {fileID: 7479676669945469312}
+  - component: {fileID: 2095171599823651126}
   m_Layer: 0
-  m_Name: Inimigo
+  m_Name: Inimigo C1
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,7 +417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nome: Ork 3
-  energia: 100
+  energia: 40
   forca_ataque: 15
   forca_do_pulo: 8
   velocidade: 6
@@ -439,8 +440,8 @@ MonoBehaviour:
   ataqueObject: {fileID: 240249740004889835}
   andando: 0
   ataque: 0
-  velocidadeDoAtaque: 2
-  raioDeVisao: 6
+  velocidadeDoAtaque: 4
+  raioDeVisao: 4
   distanciaMinima: 2.5
 --- !u!135 &2412377380620870278
 SphereCollider:
@@ -477,6 +478,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 6294914146557134926}
   velocidadeDaAnimacao: 3
+--- !u!114 &2095171599823651126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121967607517572009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35d1b536e3571224c9102b1ac8aadd6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6676187964622699893
 PrefabInstance:
   m_ObjectHideFlags: 0

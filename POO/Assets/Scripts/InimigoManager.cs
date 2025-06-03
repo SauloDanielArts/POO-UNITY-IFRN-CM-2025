@@ -6,9 +6,12 @@ public class InimigoManager : MonoBehaviour
     private MovimentoInimigo movimentoInimigo;
     public float velocidadeDaAnimacao = 1;
     
+    private Inimigo inimigo;
+    
     void Start()
     {
         movimentoInimigo = GetComponent<MovimentoInimigo>();
+        inimigo = GetComponent<Inimigo>();
     }
    void Update()
     {
@@ -19,5 +22,11 @@ public class InimigoManager : MonoBehaviour
       {
           animator.SetTrigger("Ataque");  
       }
+
+      if (inimigo.Energia() <= 0)
+      {
+          gameObject.SetActive(false);
+      }
+
     }
 }
