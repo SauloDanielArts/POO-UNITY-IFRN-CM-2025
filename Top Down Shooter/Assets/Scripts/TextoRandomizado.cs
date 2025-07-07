@@ -28,4 +28,10 @@ public class TextoRandomizado : MonoBehaviour
             UITexto.text = novoTexto + " " + numero;
         }
     }
+
+    public void SomaUm()
+    {
+        numero++;
+        UITexto.text = novoTexto + " " + numero;
+    }
 }
