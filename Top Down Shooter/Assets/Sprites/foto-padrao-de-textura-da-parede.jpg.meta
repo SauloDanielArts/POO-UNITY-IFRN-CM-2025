@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      foto-padrao-de-textura-da-parede_0: -1010682206192819222
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
