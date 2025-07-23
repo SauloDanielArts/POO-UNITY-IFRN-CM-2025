@@ -121,10 +121,10 @@ TextureImporter:
       name: sPlayerRun_strip7_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 4
-        width: 29
-        height: 35
+        x: 0
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,10 +143,10 @@ TextureImporter:
       name: sPlayerRun_strip7_1
       rect:
         serializedVersion: 2
-        x: 46
-        y: 4
-        width: 28
-        height: 29
+        x: 40
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,10 +165,10 @@ TextureImporter:
       name: sPlayerRun_strip7_2
       rect:
         serializedVersion: 2
-        x: 86
-        y: 4
-        width: 29
-        height: 28
+        x: 80
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +187,10 @@ TextureImporter:
       name: sPlayerRun_strip7_3
       rect:
         serializedVersion: 2
-        x: 126
-        y: 5
-        width: 26
-        height: 29
+        x: 120
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,10 +209,10 @@ TextureImporter:
       name: sPlayerRun_strip7_4
       rect:
         serializedVersion: 2
-        x: 164
-        y: 7
-        width: 26
-        height: 31
+        x: 160
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: sPlayerRun_strip7_5
       rect:
         serializedVersion: 2
-        x: 206
-        y: 4
-        width: 27
-        height: 31
+        x: 200
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,10 +253,10 @@ TextureImporter:
       name: sPlayerRun_strip7_6
       rect:
         serializedVersion: 2
-        x: 244
-        y: 4
-        width: 30
-        height: 30
+        x: 240
+        y: 0
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4b4aac619f703574f9a8eb6d2c660a25
     internalID: 0
     vertices: []
     indices: 

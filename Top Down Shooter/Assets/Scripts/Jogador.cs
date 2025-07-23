@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Jogador : Persoangem
+public class Jogador : Personagem
 {
     void Start()
     {

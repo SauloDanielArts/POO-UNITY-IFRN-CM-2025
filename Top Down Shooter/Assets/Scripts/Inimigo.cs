@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Inimigo : Persoangem
+public class Inimigo : Personagem
 {
     void Start()
     {
