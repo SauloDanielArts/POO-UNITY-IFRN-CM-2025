@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class Dano : MonoBehaviour
 {
+    public string tagDoObjeto;
     public int dano = 1;
+    
     public void OnCollisionEnter2D(Collision2D colisao)
     {
-        if (colisao.gameObject.tag == "Player")
+        if (colisao.gameObject.tag == tagDoObjeto)
         {
-          int vidas =  colisao.gameObject.GetComponent<Jogador>().getVidas();
-          colisao.gameObject.GetComponent<Jogador>().setVidas(vidas-dano);
+          int vidas =  colisao.gameObject.GetComponent<Personagem>().getVidas();
+          colisao.gameObject.GetComponent<Personagem>().setVidas(vidas-dano);
         }
     }
 

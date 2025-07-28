@@ -6,7 +6,7 @@ public class BarraDeVida : MonoBehaviour
     public Slider sliderVidasRestantes;
     public Slider sliderEnergiaRestate;
     
-    public Jogador jogador;
+    public Personagem personagem;
     [SerializeField]
     private int vidasRestantes = 0;
     [SerializeField]
@@ -15,28 +15,40 @@ public class BarraDeVida : MonoBehaviour
   
     void Start()
     {
-        if (jogador == null)
+        if (personagem == null)
         {
             //jogador = GameObject.Find("Jogador").GetComponent<Jogador>();
-            jogador = GameObject.FindWithTag("Player").GetComponent<Jogador>();
+            personagem = GameObject.FindWithTag("Player").GetComponent<Jogador>();
         }
 
-        if (jogador != null)
+        if (personagem != null)
         {
-            sliderVidasRestantes.minValue = 0;
-            sliderVidasRestantes.maxValue = jogador.getVidas();
+            if (sliderVidasRestantes != null)
+            {
+                sliderVidasRestantes.minValue = 0;
+                sliderVidasRestantes.maxValue = personagem.getVidas();
+            }
 
-            sliderEnergiaRestate.minValue = 0;
-            sliderEnergiaRestate.maxValue = jogador.getEnergia();
+            if (sliderEnergiaRestate != null)
+            {
+                sliderEnergiaRestate.minValue = 0;
+                sliderEnergiaRestate.maxValue = personagem.getEnergia();
+            }
         }
     }
 
     void Update()
     {
-        vidasRestantes = jogador.getVidas();
-        sliderVidasRestantes.value = vidasRestantes; 
-        
-        energiaRestate = jogador.getEnergia();
-        sliderEnergiaRestate.value = energiaRestate;
+        if (sliderVidasRestantes != null)
+        {
+            vidasRestantes = personagem.getVidas();
+            sliderVidasRestantes.value = vidasRestantes;
+        }
+
+        if (sliderEnergiaRestate != null)
+        {
+            energiaRestate = personagem.getEnergia();
+            sliderEnergiaRestate.value = energiaRestate;
+        }
     }
 }
