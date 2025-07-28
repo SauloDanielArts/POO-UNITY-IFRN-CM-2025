@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu_Inicila_PDJ2V.unity
     guid: c28c7ddf29e07ba41aaeb9f8e63551c0
   - enabled: 1
+    path: Assets/Scenes/Menu_Inicila_PDJ2M.unity
+    guid: 4e0307c11c63d7d49abd800eda2bf371
+  - enabled: 1
     path: Assets/Scenes/Jogo_PDJ2V.unity
     guid: ee13722d1e57064499e3f9fa342c1963
   - enabled: 1
     path: Assets/Scenes/Jogo_PDJ2M.unity
     guid: a18d196da5ef5be40a0d267e52664f34
+  - enabled: 1
+    path: Assets/Scenes/2M.unity
+    guid: c5e9b70b131a11443b62411e00bbfca2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
