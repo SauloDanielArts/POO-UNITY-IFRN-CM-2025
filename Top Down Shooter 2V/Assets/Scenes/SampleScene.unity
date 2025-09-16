@@ -392,14 +392,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8555999344733150801, guid: e4601a3f614938d439e402d0974c14ba, type: 3}
-      propertyPath: bala
-      value: 
-      objectReference: {fileID: 3840328474020215116, guid: 14c8f332e4941fc48a2c7603783f8def, type: 3}
-    - target: {fileID: 8555999344733150801, guid: e4601a3f614938d439e402d0974c14ba, type: 3}
-      propertyPath: intevaloDeDisparo
-      value: 0.2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
