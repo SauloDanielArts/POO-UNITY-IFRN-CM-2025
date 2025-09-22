@@ -4,6 +4,8 @@ public class Inimigo : Personagem
 {
     [SerializeField] private int dano = 1;
 
+    [SerializeField] private Transform posicaoDoPlayer;
+    
     public void setDano(int dano)
     {
         this.dano = dano;
@@ -15,11 +17,23 @@ public class Inimigo : Personagem
 
     void Start()
     {
-        
+        if (posicaoDoPlayer == null)
+        {
+            posicaoDoPlayer =  GameObject.Find("Player").transform;
+        }
     }
 
     void Update()
     {
+        if (posicaoDoPlayer != null)
+        {
+            Debug.Log("Posição do Pluer"+ posicaoDoPlayer.position);
+            
+            transform.position = Vector3.MoveTowards(transform.position, 
+                posicaoDoPlayer.transform.position,
+                getVelocidade() * Time.deltaTime);
+        }
+        
         if (getVida() <= 0)
         {
             //desativa o objeto do Inimigo

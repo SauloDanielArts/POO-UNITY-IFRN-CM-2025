@@ -47,7 +47,7 @@ public class Bala : MonoBehaviour
         // desliga a bala apos a colisão
         //gameObject.SetActive(false);
         
-        //destrtoi a bala apos a colisõ
+        //destrtoi a bala apos a colisão
         Destroy(gameObject);
     }
 }
