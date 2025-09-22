@@ -8,6 +8,10 @@ public class Inimigo : Personagem
     }
     void Update()
     {
-        
+        if (getVida() <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
+
