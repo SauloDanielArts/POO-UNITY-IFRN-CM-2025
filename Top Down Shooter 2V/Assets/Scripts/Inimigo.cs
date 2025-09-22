@@ -6,6 +6,9 @@ public class Inimigo : Personagem
 
     [SerializeField] private Transform posicaoDoPlayer;
     
+    private SpriteRenderer spriteRenderer;
+
+    
     public void setDano(int dano)
     {
         this.dano = dano;
@@ -17,6 +20,8 @@ public class Inimigo : Personagem
 
     void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
         if (posicaoDoPlayer == null)
         {
             posicaoDoPlayer =  GameObject.Find("Player").transform;
@@ -25,6 +30,17 @@ public class Inimigo : Personagem
 
     void Update()
     {
+        if (posicaoDoPlayer.position.x - transform.position.x > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        
+        if (posicaoDoPlayer.position.x - transform.position.x < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+
+
         if (posicaoDoPlayer != null)
         {
             Debug.Log("Posição do Pluer"+ posicaoDoPlayer.position);
