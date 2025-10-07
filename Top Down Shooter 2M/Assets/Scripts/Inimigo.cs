@@ -42,44 +42,54 @@ public class Inimigo : Personagem
     void Update()
     {
         andando = false;
-        
-        if (posicaoDoPlayer.position.x - transform.position.x > 0)
+
+        if (getVida() > 0)
         {
-            spriteRenderer.flipX = false;
-        }
-        
-        if (posicaoDoPlayer.position.x - transform.position.x < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
+
+            if (posicaoDoPlayer.position.x - transform.position.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+
+            if (posicaoDoPlayer.position.x - transform.position.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
 
 
-        if (posicaoDoPlayer != null && 
-            Vector3.Distance(posicaoDoPlayer.position, transform.position) <= raioDeVisao )
-        {
-            Debug.Log("Posição do Pluer"+ posicaoDoPlayer.position);
-            
-            transform.position = Vector3.MoveTowards(transform.position, 
-                posicaoDoPlayer.transform.position,
-                getVelocidade() * Time.deltaTime);
-            
-            andando = true;
+            if (posicaoDoPlayer != null &&
+                Vector3.Distance(posicaoDoPlayer.position, transform.position) <= raioDeVisao)
+            {
+                Debug.Log("Posição do Pluer" + posicaoDoPlayer.position);
+
+                transform.position = Vector3.MoveTowards(transform.position,
+                    posicaoDoPlayer.transform.position,
+                    getVelocidade() * Time.deltaTime);
+
+                andando = true;
+            }
         }
-        
+
         if (getVida() <= 0)
         {
-            //desativa o objeto do Inimigo
-            gameObject.SetActive(false);
+            animator.SetTrigger("Morte");
         }
         
         animator.SetBool("Andando",andando);
 
     }
-    
-    
+
+    public void desativa()
+    {
+        //desativa o objeto do Inimigo
+        //gameObject.SetActive(false);
+        Destroy(gameObject);
+        Debug.Log("Teste...");
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && getVida() > 0)
         {
             // Causa dano ao Player
             int novaVida = collision.gameObject.GetComponent<Personagem>().getVida() - getDano();
@@ -87,8 +97,8 @@ public class Inimigo : Personagem
 
             //collision.gameObject.GetComponent<Personagem>().recebeDano(getDano());
             
-            //desativa quando bate no player
-            gameObject.SetActive(false);
+            //sera a vida do inimigo
+            setVida(0);
         }
     }
 

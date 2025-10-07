@@ -4,9 +4,9 @@ public class CriarInimigos : MonoBehaviour
 {
    
     public GameObject[] inimigos; 
+    public Transform[] posicaoDosInimigos;
     
     public float tempoDoNovoInimigo = 15; //segundos
-    public float distanciaInimigo = 5;
     
     private float cronometroInimigo = 0;
     
@@ -24,10 +24,11 @@ public class CriarInimigos : MonoBehaviour
 
         if (cronometroInimigo >= tempoDoNovoInimigo)
         {
-            GameObject inimigo = Instantiate(inimigos[Random.Range(0, inimigos.Length)], 
-                new Vector3(transform.position.x+Random.Range(-distanciaInimigo,distanciaInimigo), 
-                    transform.position.y+Random.Range(-distanciaInimigo,distanciaInimigo), transform.position.z), 
-                transform.rotation) as GameObject;
+            Transform posicao = posicaoDosInimigos[Random.Range(0, posicaoDosInimigos.Length)];
+           
+            GameObject inimigo = Instantiate( 
+                inimigos[Random.Range(0, inimigos.Length)], 
+                posicao) as GameObject;
             
             cronometroInimigo = 0;
         }
