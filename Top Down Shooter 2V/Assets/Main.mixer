@@ -39,7 +39,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FSX
+  m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 23c2977592982e24998dfca2cd35ca81
   m_Children: []
@@ -67,7 +67,15 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: dffb9d75474a0584ea5a3499d1036cd3
+    name: GUI
+  - guid: bcd314dbdd081954c943968e88b6a2ee
+    name: Master
+  - guid: cf49a9c9a889f5d47aed2aed003d64d2
+    name: Musica
+  - guid: 7947041a3b944aa43a300e174c1e34d1
+    name: SFX
   m_AudioMixerGroupViews:
   - guids:
     - f31cedc52322101418d9ab72bc17d90b
@@ -123,9 +131,9 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 5e1b616636b4db2469800bd264584f22
   m_FloatValues:
-    cf49a9c9a889f5d47aed2aed003d64d2: -7.8940816
-    7947041a3b944aa43a300e174c1e34d1: -8.362409
-    bcd314dbdd081954c943968e88b6a2ee: -36.388092
+    cf49a9c9a889f5d47aed2aed003d64d2: -0.08374829
+    7947041a3b944aa43a300e174c1e34d1: 0
+    bcd314dbdd081954c943968e88b6a2ee: 0.3945702
   m_TransitionOverrides: {}
 --- !u!243 &1408563512739114741
 AudioMixerGroupController:
