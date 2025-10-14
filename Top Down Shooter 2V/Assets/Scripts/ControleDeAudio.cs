@@ -1,39 +1,48 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
-using Slider = UnityEngine.UI.Slider;
+using UnityEngine.UI;
 
 public class ControleDeAudio : MonoBehaviour
 {
-    public AudioMixer  audioMixer;
-    public float volume = 0f;
-    
-    public Slider slider;
+    public AudioMixer audioMixer;
+    float masterVolume = 0;
+
     public TMP_Text texto;
-    
+    public Slider slider;
     
     void Start()
     {
-        slider.minValue = -20;
-        slider.maxValue = 20;
-        slider.value = volume;
+        audioMixer.GetFloat("Master", out masterVolume);
+        
+        slider.value = masterVolume;
     }
-
-    void Update()
+ void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A) && volume < 20)
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            volume += 1;
+            masterVolume += 1f;
+            audioMixer.SetFloat("Master", masterVolume);
         }
         
-        if (Input.GetKeyDown(KeyCode.S) && volume > -80)
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            volume -= 1;
+            masterVolume -= 1f;
+            audioMixer.SetFloat("Master", masterVolume);
         }
 
-        volume = slider.value;
+
+        masterVolume = slider.value;
+        texto.text = masterVolume.ToString();
+
+        if (masterVolume <= -20)
+        {
+            audioMixer.SetFloat("Master", -80f); 
+        }
+        else
+        {
+            audioMixer.SetFloat("Master", masterVolume);  
+        }
         
-        audioMixer.SetFloat("Master", volume);
-        texto.text = volume.ToString();
     }
 }
