@@ -6,6 +6,8 @@ public class Bala : MonoBehaviour
     [SerializeField] private int dano = 1;
     [SerializeField] private float velocidade = 1.5f;
 
+    public GameObject explosao;
+    
     private Renderer m_Renderer;
 
     public void setDano(int dano)
@@ -43,7 +45,22 @@ public class Bala : MonoBehaviour
             int novaVida = colisao.gameObject.GetComponent<Personagem>().getVida() - getDano();
             colisao.gameObject.GetComponent<Personagem>().setVida(novaVida);
         }
-        
+
+        if (explosao != null)
+        {
+            ativarExplosao();
+        }
+
         Destroy(this.gameObject);
+ 
     }
+    
+      
+    public void ativarExplosao()
+    {
+        explosao.transform.position = transform.position;
+        explosao.transform.parent = null;
+        explosao.SetActive(true);
+    }
+
 }
