@@ -7,26 +7,45 @@ public class Player : Persoangem
    
     private bool andando = false;
 
-    public Transform arma;
+    public GameObject[] armas;
+
+    private GameObject armaAtual;
     
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        
+
+        armaAtual = armas[0];
+        armaAtual.SetActive(true);
     }
 
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            armaAtual.SetActive(false);
+            armaAtual = armas[0];
+            armaAtual.SetActive(true);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            armaAtual.SetActive(false);
+            armaAtual = armas[1];
+            armaAtual.SetActive(true);
+        }
+
+
         andando = false;
 
-        if (arma.rotation.eulerAngles.z > -90 && arma.rotation.eulerAngles.z < 90)
+        if (armaAtual.transform.rotation.eulerAngles.z > -90 && armaAtual.transform.rotation.eulerAngles.z < 90)
         {
             spriteRenderer.flipX = false;
         }
         
-        if (arma.rotation.eulerAngles.z > 90 && arma.rotation.eulerAngles.z < 270)
+        if (armaAtual.transform.rotation.eulerAngles.z > 90 && armaAtual.transform.rotation.eulerAngles.z < 270)
         {
             spriteRenderer.flipX = true;
         }
