@@ -76,10 +76,11 @@ public class Inimigo : Personagem
 
         if (getVida() <= 0)
         {
-            animator.SetTrigger("Morte");
+           // animator.SetTrigger("Morte");
+           Destroy(this.gameObject);
         }
         
-        animator.SetBool("Andando",andando);
+       // animator.SetBool("Andando",andando);
 
     }
 
