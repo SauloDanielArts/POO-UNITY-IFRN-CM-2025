@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Player : Persoangem
+public class Player : Personagem
 {
     private SpriteRenderer spriteRenderer;
     private Animator animator;

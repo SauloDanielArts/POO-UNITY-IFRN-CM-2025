@@ -40,8 +40,8 @@ public class Bala : MonoBehaviour
         if (colisao.gameObject.CompareTag("Inimigo"))
         {
             //causa dano ao Inimigo
-            int novaVida = colisao.gameObject.GetComponent<Persoangem>().getVida() - getDano();
-            colisao.gameObject.GetComponent<Persoangem>().setVida(novaVida);
+            int novaVida = colisao.gameObject.GetComponent<Personagem>().getVida() - getDano();
+            colisao.gameObject.GetComponent<Personagem>().setVida(novaVida);
         }
         
         Destroy(this.gameObject);
