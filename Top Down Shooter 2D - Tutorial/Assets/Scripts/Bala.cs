@@ -46,13 +46,17 @@ public class Bala : MonoBehaviour
             colisao.gameObject.GetComponent<Personagem>().setVida(novaVida);
         }
 
-        if (explosao != null)
+       
+        if (!colisao.gameObject.CompareTag("Player") && !colisao.gameObject.CompareTag("Bala"))
         {
-            ativarExplosao();
+            if (explosao != null)
+            {
+                ativarExplosao();
+            }
+            
+            Destroy(this.gameObject);
         }
 
-        Destroy(this.gameObject);
- 
     }
     
       

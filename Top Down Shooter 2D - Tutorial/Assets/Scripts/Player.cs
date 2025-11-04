@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Personagem
 {
@@ -75,5 +76,10 @@ public class Player : Personagem
         }
         
         animator.SetBool("Andando", andando);
+
+        if (getVida() <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

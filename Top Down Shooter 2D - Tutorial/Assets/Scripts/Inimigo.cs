@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Inimigo : Personagem
@@ -97,7 +98,7 @@ public class Inimigo : Personagem
         Debug.Log("Teste...");
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && getVida() > 0)
         {
