@@ -139,7 +139,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 6909385119875833920, guid: 27a57d27e641f7e49b539c08b398bb07, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Arma
   saidaDoTiro: {fileID: 9123847856121080872}
   bala: {fileID: 3134491209277388206, guid: 149d113408ece914b9374962d43fc626, type: 3}
-  intervaloDeDisparo: 0.2
+  intervaloDeDisparo: 0.5
   cursor: {fileID: 9135763352847554593}
 --- !u!1 &8443709379916675705
 GameObject:
@@ -179,11 +179,12 @@ GameObject:
   - component: {fileID: 5901950067793480422}
   - component: {fileID: 4466131557667017876}
   - component: {fileID: 6407654017189365216}
+  - component: {fileID: 1009734516821697727}
   - component: {fileID: 6303261394761402571}
   - component: {fileID: 666265894814574797}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,6 +325,43 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.12}
   m_Radius: 0.2
+--- !u!70 &1009734516821697727
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8443709379916675705}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 0.8}
+  m_Direction: 0
 --- !u!114 &6303261394761402571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,7 +479,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21721044352857004, guid: 031dde4c77494dc419f819407f51d6ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
