@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,5 +23,10 @@ public class GameManager : MonoBehaviour
         
         textoPontos.text = pontos.ToString();
         textoMunicao.text = municao.ToString();
+        
+        if( player.GetComponent<Player>().vida <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
