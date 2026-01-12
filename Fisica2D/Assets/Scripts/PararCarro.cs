@@ -17,7 +17,7 @@ public class PararCarro : MonoBehaviour
   {
     if (collision.gameObject.CompareTag("Chao"))
     {
-      carro.capatado = true;
+      carro.capotado = true;
     }
   }
   
@@ -25,7 +25,7 @@ public class PararCarro : MonoBehaviour
   {
     if (collision.gameObject.CompareTag("Chao"))
     {
-      carro.capatado = false;
+      carro.capotado = false;
     }
   }
 

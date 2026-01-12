@@ -5,7 +5,7 @@ public class Carro : MonoBehaviour
     public float velocidadeMaxima = 10f;
     public ConstantForce2D forca;
     
-    public bool capatado = false;
+    public bool capotado = false;
     
     public enum Direcao
     {
@@ -22,7 +22,7 @@ public class Carro : MonoBehaviour
     void Update()
     {
 
-        if (capatado == false)
+        if (capotado == false)
         {
 
             if (Input.GetKeyDown(KeyCode.D))
